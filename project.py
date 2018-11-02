@@ -20,7 +20,7 @@ CLIENT_ID = json.loads(
 APPLICATION_NAME = "Items Catalog App"
 
 #Connect to Database and create database session
-engine = create_engine('sqlite:///naya.db')
+engine = create_engine('postgresql://catalog:surviver123@localhost/catalog')
 Base.metadata.bind = engine
 
 session = scoped_session(sessionmaker(bind=engine))
